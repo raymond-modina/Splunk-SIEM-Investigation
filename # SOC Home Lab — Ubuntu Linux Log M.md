@@ -56,25 +56,25 @@ Splunk Enterprise was installed natively on the Windows host.
 
 Installation directory:
 
-```mermaid
+```text
 C:\Program Files\Splunk
 ```
 
 Splunk Web:
 
-```mermaid
+```text
 http://192.168.x.x:8000
 ```
 
 The Windows host's LAN IP was:
 
-```mermaid
+```text
 192.168.x.x
 ```
 
 Splunk was confirmed to be listening on port 8000:
 
-```mermaid
+```text
 TCP 0.0.0.0:8000
 ```
 
@@ -88,7 +88,7 @@ The Splunk Web administrator credentials had previously been forgotten.
 
 The Splunk installation's password configuration was inspected and the administrator username was identified as:
 
-```mermaid
+```text
 admin
 ```
 
@@ -104,7 +104,7 @@ The Windows Splunk installation had previously been operating under the Splunk E
 
 The license group was changed through:
 
-```mermaid
+```text
 Settings
 → Licensing
 → Change license group
@@ -119,7 +119,7 @@ The Splunk installation was successfully converted to the Free license group whi
 
 The Ubuntu virtual machine was identified as:
 
-```mermaid
+```text
 Ubuntu 24.04.4 LTS
 Codename: noble
 Architecture: amd64
@@ -127,19 +127,19 @@ Architecture: amd64
 
 Ubuntu hostname:
 
-```mermaid
+```text
 splunk-VMware-Virtual-Platform
 ```
 
 Linux username:
 
-```mermaid
+```text
 splunk
 ```
 
 Ubuntu IP address:
 
-```mermaid
+```text
 192.168.x.x
 ```
 
@@ -151,7 +151,7 @@ The password for the Ubuntu Linux user `splunk` had been forgotten.
 
 The VM was booted into Ubuntu recovery mode and a root maintenance shell was accessed:
 
-```mermaid
+```text
 root@splunk-VMware-Virtual-Platform:#
 ```
 
@@ -181,7 +181,7 @@ sudo whoami
 
 which returned:
 
-```mermaid
+```text
 root
 ```
 
@@ -199,7 +199,7 @@ sudo tail -20 /var/log/auth.log
 
 The output showed successful sudo activity, including entries such as:
 
-```mermaid
+```text
 pam_unix(sudo:session): session opened
 ```
 
@@ -213,19 +213,19 @@ The VMware environment was investigated when Ubuntu temporarily lost Internet co
 
 The VMware Virtual Network Editor showed:
 
-```mermaid
+```text
 VMnet0
 Type: Bridged
 External Connection: Auto-bridging
 ```
 
-```mermaid
+```text
 VMnet1
 Type: Host-only
 Subnet: 192.168.x.x
 ```
 
-```mermaid
+```text
 VMnet8
 Type: NAT
 Subnet: 192.168.x.x
@@ -234,7 +234,7 @@ DHCP: Enabled
 
 Ubuntu's IP:
 
-```mermaid
+```text
 192.168.x.x
 ```
 
@@ -242,7 +242,7 @@ was consistent with the VMnet8 NAT subnet.
 
 The Windows VMware virtual adapters were also checked:
 
-```mermaid
+```text
 VMware Network Adapter VMnet8 — Enabled
 VMware Network Adapter VMnet1 — Enabled
 ```
@@ -257,7 +257,7 @@ Before configuring log forwarding, connectivity between Ubuntu and Windows was t
 
 Splunk Web was accessible from Ubuntu using:
 
-```mermaid
+```text
 http://192.168.x.x:8000
 ```
 
@@ -269,7 +269,7 @@ nc -vz 192.168.x.x 8000
 
 Result:
 
-```mermaid
+```text
 Connection to 192.168.x.x 8000 port [tcp/*] succeeded!
 ```
 
@@ -283,7 +283,7 @@ Splunk Enterprise on Windows was configured to receive forwarded data.
 
 In Splunk Web:
 
-```mermaid
+```text
 Settings
 → Forwarding and receiving
 → Configure receiving
@@ -292,7 +292,7 @@ Settings
 
 Port configured:
 
-```mermaid
+```text
 9997
 ```
 
@@ -304,7 +304,7 @@ netstat -ano | findstr :9997
 
 The result:
 
-```mermaid
+```text
 TCP    0.0.0.0:9997    0.0.0.0:0    LISTENING
 ```
 
@@ -322,7 +322,7 @@ nc -vz 192.168.x.x 9997
 
 Result:
 
-```mermaid
+```text
 Connection to 192.168.1.120 9997 port [tcp/*] succeeded!
 ```
 
@@ -336,7 +336,7 @@ The Splunk Universal Forwarder was downloaded from Splunk's official website.
 
 Downloaded package:
 
-```mermaid
+```text
 splunkforwarder-10.4.3-4174a2deda5d-linux-amd64.deb
 ```
 
@@ -350,7 +350,7 @@ The installation completed successfully.
 
 The following messages appeared during installation:
 
-```mermaid
+```text
 Setting up splunkforwarder (10.4.3) ...
 complete
 ```
@@ -369,7 +369,7 @@ sudo /opt/splunkforwarder/bin/splunk status
 
 Result:
 
-```mermaid
+```text
 splunkd is running
 splunk helpers are running
 ```
@@ -382,7 +382,7 @@ sudo /opt/splunkforwarder/bin/splunk version
 
 Result:
 
-```mermaid
+```text
 Splunk Universal Forwarder 10.4.3
 Build 4174a2deda5d
 ```
@@ -393,7 +393,7 @@ Build 4174a2deda5d
 
 The Universal Forwarder was configured to send data to the Windows Splunk Enterprise instance:
 
-```mermaid
+```text
 192.168.x.x:9997
 ```
 
@@ -405,7 +405,7 @@ sudo /opt/splunkforwarder/bin/splunk add forward-server 192.168.x.xxx:9997
 
 The Forwarder reported:
 
-```mermaid
+```text
 192.168.x.x:9997 forwarded-server already present
 ```
 
@@ -417,7 +417,7 @@ This confirmed that the forwarding destination was already configured.
 
 The Universal Forwarder was configured to monitor:
 
-```mermaid
+```text
 /var/log/auth.log
 ```
 
@@ -435,7 +435,7 @@ sudo /opt/splunkforwarder/bin/splunk add monitor /var/log/auth.log
 
 The Universal Forwarder was also configured to monitor:
 
-```mermaid
+```text
 /var/log/syslog
 ```
 
@@ -471,13 +471,13 @@ sudo whoami
 
 The resulting authentication activity appeared in:
 
-```mermaid
+```text
 /var/log/auth.log
 ```
 
 For example:
 
-```mermaid
+```text
 pam_unix(sudo:session): session opened
 ```
 
@@ -491,7 +491,7 @@ The Ubuntu logs were successfully forwarded to Splunk Enterprise.
 
 The completed pipeline is:
 
-```mermaid
+```text
 Ubuntu Authentication/System Logs
               │
               ▼
@@ -562,7 +562,7 @@ The completed lab demonstrates a simplified version of a real SOC log collection
 
 An endpoint generates security-relevant events:
 
-```mermaid
+```text
 Linux Endpoint
       │
       ▼
