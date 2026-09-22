@@ -17,7 +17,7 @@ The objective was to collect Ubuntu authentication and system logs and forward t
 
 ## 2. Lab Architecture
 
-```mermaid
+```text
                     SOC HOME LAB
 
 ┌───────────────────────────────────────┐
