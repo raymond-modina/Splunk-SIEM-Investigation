@@ -7,7 +7,4 @@ network analysis, threat detection, vulnerability assessment, and incident respo
 
 🛡️ Certifications & Education
 
-Bachelor of Computer Engineering
-CompTIA Security+
-Cisco CCNA
-NUS Certificate in Cybersecurity
+Bachelor of Computer Engineering | CompTIA Security+ | Cisco CCNA | NUS Certificate in Cybersecurity
