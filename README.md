@@ -1,22 +1,41 @@
-## SOC Home Lab
+👨‍💻 Raymond Modina — SOC Analyst Portfolio
 
-## Objective:
-Build A Home SOC Environment Using Splunk
+Welcome to my cybersecurity portfolio
 
-## Lab Environment
-- Ubuntu 24.04.4 LTS as the monitored Linux endpoint
-- Splunk Universal Forwarder 10.4.3 installed on Ubuntu
-- Splunk Enterprise 10.2.2 running on a Windows host
-- Splunk Free license on the Windows Splunk installation
-- TCP port 9997 for Splunk log forwarding
-- TCP port 8000 for Splunk Web
+I am an aspiring SOC Analyst focused on developing practical skills in security monitoring, 
+network analysis, threat detection, vulnerability assessment, and incident response.
 
-## What I Accomplished
-- Ubuntu endpoint log generation
-- Splunk Universal Forwarder installation
-- Splunk Forward Server configuration
-- TCP 9997 connectivity
-- Authentication log collection
-- System log collection
-- Successful forwarding to Splunk Enterprise
-- End-to-end SIEM log ingestion
+🛡️ Certifications & Education
+
+Bachelor of Computer Engineering
+CompTIA Security+
+Cisco CCNA
+NUS Certificate in Cybersecurity
+
+🔐 Cybersecurity Skills
+
+Security Operations
+SIEM monitoring
+Log analysis
+Security alert investigation
+Incident response
+Threat detection
+IOC analysis
+
+Networking
+TCP/IP
+DNS
+HTTP/HTTPS
+VLANs
+Routing & switching
+ACLs
+OSPF
+Network troubleshooting
+
+Security Tools
+Splunk
+Wireshark
+Nmap
+Nessus
+Kali Linux
+Metasploit
