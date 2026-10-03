@@ -39,7 +39,7 @@ The objective was to collect Ubuntu authentication and system logs and forward t
 ┌───────────────────────────────────────┐
 │          Windows Host                 │
 │                                       │
-│ IP: 192.168.1.120                     │
+│ IP: 192.168.x.xxx                     │
 │                                       │
 │ Splunk Enterprise 10.2.2              │
 │ Splunk Web: TCP 8000                  │
